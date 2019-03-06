@@ -4,7 +4,13 @@ import java.util.Date;
 
 import javax.validation.constraints.Size;
 
+import org.apache.log4j.Logger;
+
+import com.upen.mvc.login.LoginController;
+
 public class Todo {
+
+	protected static Logger log = Logger.getLogger(Todo.class);
 
 	private int id;
 	private String user;
@@ -26,6 +32,7 @@ public class Todo {
 		this.desc = desc;
 		this.targetDate = targetDate;
 		this.isDone = isDone;
+		
 	}
 
 	@Override
